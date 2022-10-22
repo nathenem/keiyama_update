@@ -1,0 +1,211 @@
+main {
+  margin: 0 auto;
+  width: 1300px;
+  margin-bottom: 15px;
+}
+
+#search_form {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  height: 350px;
+  background-image: linear-gradient(
+      to bottom,
+      rgba(255, 255, 255, 0.5),
+      rgba(255, 255, 255, 0.5)
+    ),
+    url("assets/tracteur.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-bottom: 15px;
+}
+
+#search_bar {
+  height: 50px;
+  width: 500px;
+  border-radius: 15px;
+  border: 0;
+  text-align: center;
+  font-size: 17px;
+  font-weight: 600;
+  transition: all 0.2s ease-in-out;
+}
+
+#search_bar:focus {
+  transform: scale(1.15);
+}
+
+#trending {
+  margin-bottom: 15px;
+  background-image: linear-gradient(
+      to bottom,
+      rgba(255, 255, 255, 0.5),
+      rgba(255, 255, 255, 0.5)
+    ),
+    url("assets/hiver.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 1300px;
+  height: 250px;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+  .showcase {
+    margin-left: 10%;
+    display: flex;
+    flex-flow: column nowrap;
+    h1,
+    h3 {
+      margin: 0 0;
+    }
+  }
+  #showcase_button {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    width: 30%;
+    height: 100%;
+    margin-right: 10%;
+    transition: all 0.2s ease-in-out;
+    a {
+      display: flex;
+      flex-flow: row nowrap;
+      justify-content: center;
+      align-items: center;
+      height: 85%;
+      h2 {
+        margin-left: 30px;
+      }
+      img {
+        height: 90%;
+      }
+    }
+    #pointer {
+      height: 45px;
+      position: relative;
+      left: -120px;
+      bottom: -30px;
+    }
+  }
+
+  #showcase_button:hover {
+    transform: scale(1.15);
+  }
+}
+
+#best_sellers {
+  background-color: white;
+  width: 1300px;
+  height: 300px;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  h1 {
+    margin-left: 15px;
+  }
+}
+
+.product {
+  background-color: rgb(242, 242, 242);
+  border-radius: 15px;
+  height: 85%;
+  transition: all 0.2s ease-in-out;
+  a {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+    div {
+      margin-left: 15px;
+    }
+    img {
+      object-fit: scale-down;
+      height: 60%;
+    }
+  }
+}
+
+.product:hover {
+  background-color: rgba(22, 80, 68, 0.5);
+  transform: scale(1.05);
+}
+
+@keyframes AutoSlide {
+  0% {
+    left: 0px; /*1ère image*/
+  }
+  15% {
+    left: 0px; /*idem pour attente*/
+  }
+  35% {
+    left: -33.33%; /*2ème image*/
+  }
+  50% {
+    left: -33.33%; /*idem pour attente*/
+  }
+  70% {
+    left: -66.66%; /*3ème image*/
+  }
+  85% {
+    left: -66.66%; /*idem pour attente*/
+  }
+  100% {
+    left: 0px; /*1ère image*/
+  }
+}
+
+#slideshow {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  margin: 20px auto;
+  overflow: hidden;
+  ul {
+    width: 166.66%;
+    height: 100%;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+    li {
+      width: 33.33%;
+      height: 100%;
+      display: flex;
+      flex-flow: row nowrap;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+  .product {
+    width: 85%;
+  }
+}
+
+#sContent li {
+  display: inline;
+}
+
+#sContent {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 450px;
+  margin: 0;
+  padding: 0;
+
+  /*CSS3 keyframes animation*/
+  animation-name: AutoSlide;
+  animation-duration: 10s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+}
