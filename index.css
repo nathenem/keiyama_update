@@ -418,11 +418,15 @@ footer div {
   width: 1300px;
   height: 100%;
   display: flex;
+  flex-flow: column nowrap;
   justify-content: center;
   align-items: center;
 }
 footer div p {
   color: white;
+}
+footer div #info_footer {
+  font-size: 13px;
 }
 
 /*# sourceMappingURL=index.css.map */

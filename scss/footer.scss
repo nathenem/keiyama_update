@@ -9,10 +9,14 @@ footer {
     width: 1300px;
     height: 100%;
     display: flex;
+    flex-flow: column nowrap;
     justify-content: center;
     align-items: center;
     p {
       color: white;
+    }
+    #info_footer {
+      font-size: 13px;
     }
   }
 }
