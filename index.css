@@ -386,17 +386,23 @@ main {
   position: relative;
   top: -13px;
   right: -235px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .green {
+  font-size: 16px;
   background-color: rgb(150, 237, 99);
 }
 
 .orange {
+  font-size: 14px;
   background-color: rgb(197, 155, 31);
 }
 
 .blue {
+  font-size: 15px;
   background-color: rgb(99, 202, 237);
 }
 
